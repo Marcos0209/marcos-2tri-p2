@@ -6,14 +6,22 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Os dois maiores grandes craques das últimas décadas são máquinas de fazer gols. Cristiano Ronaldo e  Messi não param de balançar as redes, sendo decisivos constantemente.",
+        enunciado: " O Sport Club Corinthians Paulista atualmente ele ganhou quantas Copas do Brasil?",
         alternativas: [
             {
-                texto: "Isso é assustador!",
+                texto: "3 Copas do Brasil",
                 afirmacao: "afirmação"
             },
             {
-                texto: "Isso é maravilhoso!",
+                texto: "4 Copas do Brasil",
+                afirmacao: "afirmação"
+            },
+            {
+                texto: "5 Copas do Brasil",
+                afirmacao: "afirmação"
+            },
+            {
+                texto: "2 Copas do Brasil",
                 afirmacao: "afirmação"
             }
         ]

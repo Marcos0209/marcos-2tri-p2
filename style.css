@@ -1,15 +1,17 @@
 :root{
     --cor-fundo: #01080E ;
-    --cor-principal: #0B0D20 ;
+    --cor-principal: #000000a2 ;
     --cor-secundaria: #212333; 
-    --cor-destaque: #2BDEFD;
+    --cor-destaque: #9b9b9b;
     --cor-texto: #D7F9FF;
 
 }
 
 body {
-    background-color: var(--cor-fundo);
+    background-image: url(back.jpg);
     color: var(--cor-texto);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,6 +24,7 @@ body {
     max-width: 600px;
     text-align: center;
     padding: 20px;
+    border-radius: 20px;
 }
 
 h1{
