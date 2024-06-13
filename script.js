@@ -10,45 +10,62 @@ const perguntas = [
         alternativas: [
             {
                 texto: "3 Copas do Brasil",
-                afirmacao: "afirmação"
+                afirmacao: "Certo"
             },
             {
                 texto: "4 Copas do Brasil",
-                afirmacao: "afirmação"
+                afirmacao: "Errado"
             },
             {
                 texto: "5 Copas do Brasil",
-                afirmacao: "afirmação"
+                afirmacao: "Errado"
             },
             {
                 texto: "2 Copas do Brasil",
-                afirmacao: "afirmação"
+                afirmacao: "Errado"
             }
         ]
     },
     {
-        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial, uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
+        enunciado: "Quem fez 21 gols, e foi o artilheiro do Corinthians em 2023?",
         alternativas: [
             {
-                texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
-                afirmacao: "afirmação"
+                texto: "Romero",
+                afirmacao: "Errado"
             },
             {
-                texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
-                afirmacao: "afirmação"
-            }
+                texto: "Yuri Alberto",
+                afirmacao: "Errado"
+            },
+            {
+                texto: "Roger Guedes",
+                afirmacao: "Certo"
+            },
+            {
+                texto: "Wesley",
+                afirmacao: "Errado"
+            },
+
         ]
     },
     {
-        enunciado: "Após a elaboração do trabalho escrito, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
+        enunciado: "Quem foi o autor do gol da vitória na final do mundial de 2012?",
         alternativas: [
             {
-                texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-                afirmacao: "afirmação"
+                texto: "Paulinho",
+                afirmacao: "Errado"
             },
             {
-                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
-                afirmacao: "afirmação"
+                texto: "Paolo Guerrero",
+                afirmacao: "Certo"
+            },
+            {
+                texto: "Emerson Sheik",
+                afirmacao: "Errado"
+            }, 
+            {
+                texto: "Ralf",
+                afirmacao: "Errado"
             }
         ]
     },
@@ -105,17 +122,27 @@ function mostraAlternativas(){
     }
 }
 
+mostraPergunta();
+
+let contagemAfirmacoes = {}; // Objeto para armazenar a contagem de cada afirmação
+
 function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = opcaoSelecionada.afirmacao;
-    historiaFinal += afirmacoes + " ";
+    const afirmacaoSelecionada = opcaoSelecionada.afirmacao;
+    if (contagemAfirmacoes.hasOwnProperty(afirmacaoSelecionada)) {
+        contagemAfirmacoes[afirmacaoSelecionada]++;
+    } else {
+        contagemAfirmacoes[afirmacaoSelecionada] = 1;
+    }
+    
+    historiaFinal += afirmacaoSelecionada + " ";
     atual++;
     mostraPergunta();
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
-    textoResultado.textContent = historiaFinal;
+    caixaPerguntas.textContent = "Sua casa é...";
+    const afimMaisEscolhida = Object.keys(contagemAfirmacoes).reduce((a, b) => contagemAfirmacoes[a] > contagemAfirmacoes[b] ? a : b);
+    textoResultado.textContent = afimMaisEscolhida;
     caixaAlternativas.textContent = "";
 }
 
-mostraPergunta();
