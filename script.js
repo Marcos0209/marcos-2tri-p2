@@ -10,19 +10,19 @@ const perguntas = [
         alternativas: [
             {
                 texto: "3 Copas do Brasil",
-                afirmacao: "Certo"
+                afirmacao: "é um corinthiano de verdade!!!"
             },
             {
                 texto: "4 Copas do Brasil",
-                afirmacao: "Errado"
+                afirmacao: "você não é um corinthiano kkkk"
             },
             {
                 texto: "5 Copas do Brasil",
-                afirmacao: "Errado"
+                afirmacao: "você não é um corinthiano kkkk"
             },
             {
                 texto: "2 Copas do Brasil",
-                afirmacao: "Errado"
+                afirmacao: "você não é um corinthiano kkkk"
             }
         ]
     },
@@ -31,19 +31,19 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Romero",
-                afirmacao: "Errado"
+                afirmacao: "não é um corinthiano kkkk"
             },
             {
                 texto: "Yuri Alberto",
-                afirmacao: "Errado"
+                afirmacao: "não é um corinthiano kkkk"
             },
             {
                 texto: "Roger Guedes",
-                afirmacao: "Certo"
+                afirmacao: "é um corinthiano de verdade!!!"
             },
             {
                 texto: "Wesley",
-                afirmacao: "Errado"
+                afirmacao: "não é um corinthiano kkkk"
             },
 
         ]
@@ -53,45 +53,61 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Paulinho",
-                afirmacao: "Errado"
+                afirmacao: "não é um corinthiano kkkk"
             },
             {
                 texto: "Paolo Guerrero",
-                afirmacao: "Certo"
+                afirmacao: "é um corinthiano de verdade!!!"
             },
             {
                 texto: "Emerson Sheik",
-                afirmacao: "Errado"
+                afirmacao: "não é um corinthiano kkkk"
             }, 
             {
                 texto: "Ralf",
-                afirmacao: "Errado"
+                afirmacao: "não é um corinthiano kkkk"
             }
         ]
     },
     {
-        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
+        enunciado: "Quem foi o time adversário que perdeu a final do Mundial de 2012 contra o Corinthians?",
         alternativas: [
             {
-                texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
-                afirmacao: "afirmação"
+                texto: "Vasco",
+                afirmacao: "não é um corinthiano kkkk"
             },
             {
-                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
-                afirmacao: "afirmação"
+                texto: "Arseno",
+                afirmacao: "não é um corinthiano kkkk"
+            },
+            {
+                texto: "Argentinos Juniors",
+                afirmacao: "não é um corinthiano kkkk"
+            },
+            {
+                texto: "Chelsea",
+                afirmacao: "é um corinthiano de verdade!!!"
             }
         ]
     },
     {
-        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda da IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz? ",
+        enunciado: "Qual foi o último título do Corinthians?",
         alternativas: [
             {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao: "afirmação"
+                texto: "Campeonato Paulista",
+                afirmacao: "não é um corinthiano kkkk"
             },
             {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao: "afirmação"
+                texto: "Campeonato Brasileiro",
+                afirmacao: "é um corinthiano de verdade!!!"
+            },
+            {
+                texto: "Copa do Brasil",
+                afirmacao: "não é um corinthiano kkkk"
+            },
+            {
+                texto: "Libertadores",
+                afirmacao: "não é um corinthiano kkkk"
             }
         ]
     },
@@ -140,7 +156,7 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Sua casa é...";
+    caixaPerguntas.textContent = "Parabéns, você...";
     const afimMaisEscolhida = Object.keys(contagemAfirmacoes).reduce((a, b) => contagemAfirmacoes[a] > contagemAfirmacoes[b] ? a : b);
     textoResultado.textContent = afimMaisEscolhida;
     caixaAlternativas.textContent = "";
