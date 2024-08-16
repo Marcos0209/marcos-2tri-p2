@@ -30,3 +30,10 @@ body {
 h1{
     color: var(--cor-destaque);
 }
+
+button {
+
+margin: 5px;
+
+}
+
